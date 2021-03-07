@@ -12,8 +12,88 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+body {
+  background-image: linear-gradient(
+      rgba(29, 28, 29, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../src/images/countries.jpg);
+  background-repeat: no-repeat;
+  background-size: 1580px 1000px;
+  background-color: rgb(78, 149, 207);
+}
 
-  /*
-   * CSS image reference example.
-   */
+.container {
+  padding-left: 50px;
+  position: relative;
+}
+
+.input-text {
+  padding-left: 10px;
+  width: 300px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 20px;
+}
+.input-container {
+  padding-top: 100px;
+}
+
+.country {
+  padding-top: 20px;
+}
+
+.country-title {
+  color: darkgrey;
+  font-size: 50px;
+  text-shadow: 2px 2px 20px #ff0000, 5px 5px 5px #000000;
+}
+
+.country-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.flag-img {
+  position: absolute;
+  top: 56%;
+  left: 30%;
+}
+
+.country-item {
+  margin-top: 12px;
+}
+
+.title-name {
+  color: whitesmoke;
+  font-weight: 900px;
+  font-size: 26px;
+  margin-right: 16px;
+}
+
+.title-value {
+  color: antiquewhite;
+  font-size: 20px;
+}
+
+.language-item {
+  color: lightpink;
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.countries-title {
+  color: lightpink;
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.countries-name {
+  color: lightpink;
+  font-size: 20px;
+  margin-top: 16px;
 }
