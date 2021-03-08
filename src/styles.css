@@ -20,7 +20,8 @@ body {
     ),
     url(../src/images/countries.jpg);
   background-repeat: no-repeat;
-  background-size: 1580px 1000px;
+  background-size: 1920px 1080px;
+
   background-color: rgb(78, 149, 207);
 }
 
