@@ -3,7 +3,7 @@ const { BASE_URL } = url;
 
 const api = {
   fetchCountries(e) {
-    const name = e.target.value.toLowerCase();
+    const name = e.target.value.toLowerCase().trim();
 
     return fetch(`${BASE_URL}${name}`).then(response => response.json());
   },

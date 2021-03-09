@@ -13,10 +13,19 @@ const liRef = document.querySelector('#list');
 const inputRef = document.querySelector('.input-text');
 
 function getCountries(e) {
-  api.fetchCountries(e).then(countries => {
-    renderCountry(countries);
-  });
-  // .catch(console.log('Oops..An error occured, please try again'));
+  const name = e.target.value.toLowerCase().trim();
+
+  if (name === '') {
+    return;
+  }
+  api
+    .fetchCountries(e)
+    .then(countries => {
+      renderCountry(countries);
+    })
+    .catch(err => {
+      console.log(err);
+    });
 }
 
 function onlyLi(e) {
@@ -28,11 +37,11 @@ function onlyLi(e) {
 }
 
 function renderCountry(countries) {
+  liRef.innerHTML = '';
   if (countries.length >= 2 && countries.length <= 10) {
     liRef.innerHTML = countriesListTmp(countries);
   } else if (countries.length === 1) {
     liRef.innerHTML = countriesTmp(countries);
-    inputRef.value = '';
   } else if (countries.length > 10) {
     error({
       text: 'Too many matches found.Please enter a more specific query!',
